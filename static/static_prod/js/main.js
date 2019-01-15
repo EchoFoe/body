@@ -18,6 +18,7 @@ AOS.init({
 	  verticalOffset: 0
   });
 
+
   // Scrollax
   $.Scrollax();
 

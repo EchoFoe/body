@@ -7697,7 +7697,7 @@ h1, h2, h3, h4, h5,
       color: #289ed7; }
       .btn.btn-primary.btn-outline-primary:hover {
         border: 1px solid transparent;
-        background: #a7a7a7;
+        background: #289ed7;
         color: #fff; }
   .btn.btn-white {
     background: #fff;
@@ -7737,7 +7737,7 @@ h1, h2, h3, h4, h5,
 .ftco-intro .wrap {
   width: 100%; }
   .ftco-intro .wrap .info {
-    background: #a7a7a7;
+    background: #289ed7;
     padding: 30px;
     color: #404040; }
     @media (min-width: 1200px) {
@@ -7934,10 +7934,10 @@ h1, h2, h3, h4, h5,
     font-size: 22px; }
   .package-program .text .price {
     width: calc(100% - 100px);
-    color: #a7a7a7;
+    color: rgb(255, 255, 255);
     font-size: 24px;
     font-weight: 500;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgb(40, 158, 215);
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
@@ -7958,7 +7958,7 @@ h1, h2, h3, h4, h5,
   .package-program:hover .price, .package-program:focus .price {
     border-bottom: 1px solid #a7a7a7; }
   .package-program:hover .btn-custom a, .package-program:focus .btn-custom a {
-    background: #a7a7a7;
+    background: rgb(40, 158, 215);
     color: #000; }
 
 .coach {
@@ -8526,7 +8526,7 @@ textarea.form-control {
       .blog-entry .text .heading a {
         color: #fff; }
         .blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
-          color: #e5ce48; }
+          color: #299fd8; }
   .blog-entry .meta > div {
     display: inline-block;
     margin-right: 5px;

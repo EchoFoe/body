@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^calendar/$', views.calendar, name='calendar'),
     url(r'^documents/$', views.documents, name='documents'),
     url(r'^about_us/$', views.about_us, name='about_us'),
+    url(r'^lk/$', views.lk, name='lk'),
     # url(r'^kvartiri/$', views.kvartiri, name='kvartiri'),
     url(r'^$', views.home, name='home'),
 

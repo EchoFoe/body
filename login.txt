@@ -1,0 +1,2 @@
+login: main_admin
+pass: bodyrework46

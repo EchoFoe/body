@@ -50,6 +50,7 @@
 }
 .icon-heart:before {
   content: "\f004";
+  color: #f7941d;
 }
 .icon-star:before {
   content: "\f005";
@@ -500,6 +501,7 @@
 }
 .icon-facebook:before {
   content: "\f09a";
+
 }
 .icon-facebook-f:before {
   content: "\f09a";

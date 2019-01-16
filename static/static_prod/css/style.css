@@ -7305,7 +7305,7 @@ h1, h2, h3, h4, h5,
   color: #e5ce48 !important; }
 
 .ftco-navbar-light {
-  background: transparent !important;
+  background: black !important;
   position: absolute;
   top: 0;
   left: 0;
@@ -7584,7 +7584,7 @@ h1, h2, h3, h4, h5,
           font-size: 18px;
           line-height: 1.5;
           font-weight: 600;
-          color: #f7941d; }
+          color: #fff; }
           .owl-carousel.home-slider .slider-item .slider-text p.sub-p {
             font-weight: 400; }
           .owl-carousel.home-slider .slider-item .slider-text p strong {
@@ -7964,7 +7964,7 @@ h1, h2, h3, h4, h5,
 .coach {
   width: 100%;
   display: block;
-  background: #000;
+  background: #1d212c;
   margin-bottom: 30px; }
   .coach .img, .coach .text {
     width: 50%; }
@@ -8040,7 +8040,7 @@ h1, h2, h3, h4, h5,
 .ftco-appointment {
   width: 100%;
   position: relative;
-  background: #000; }
+  background: #1d212c; }
   .ftco-appointment .overlay {
     position: absolute;
     top: 0;
@@ -8056,7 +8056,7 @@ h1, h2, h3, h4, h5,
     .appointment {
       padding: 7% 12% 7% 5% !important; } }
   .appointment h3 {
-    color: #fff; }
+    color: #f7941d; }
 
 .appointment-form .form-group {
   position: relative;
@@ -8266,12 +8266,12 @@ textarea.form-control {
       padding: 6em 0; } }
 
 .ftco-bg-dark {
-  background: #090808; }
+  background: #1d212c; }
 
 .ftco-footer {
   font-size: 16px;
   padding: 7em 0;
-  background: #120f0f; }
+  background: #1D212D; }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
     letter-spacing: .1em; }
@@ -8526,17 +8526,17 @@ textarea.form-control {
       .blog-entry .text .heading a {
         color: #fff; }
         .blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
-          color: #299fd8; }
+          color: #f7941d; }
   .blog-entry .meta > div {
     display: inline-block;
     margin-right: 5px;
     margin-bottom: 0;
     font-size: 14px; }
     .blog-entry .meta > div a {
-      color: gray;
+      color: #f7941d;
       font-size: 15px; }
       .blog-entry .meta > div a:hover {
-        color: #666666; }
+        color: #f7941d; }
 
 .block-23 ul {
   padding: 0; }

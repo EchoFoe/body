@@ -7791,7 +7791,9 @@ h1, h2, h3, h4, h5,
       padding: 8% 13% 8% 5%;
       width: 50%; } }
   .ftco-about .one-half.img {
-    display: block; }
+    display: block;
+    height: 650px;
+  }
     @media (max-width: 767.98px) {
       .ftco-about .one-half.img {
         height: 300px; } }
@@ -8399,7 +8401,6 @@ textarea.form-control {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 650px;
 }
 
 @media (max-width: 767.98px) {

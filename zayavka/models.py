@@ -9,6 +9,7 @@ class Zayavka(models.Model):
     middle_name = models.CharField(max_length=128, default=True, verbose_name='Отчество')
     phone = models.CharField(max_length=18, default=True, verbose_name='Номер телефона')
     weight = models.DecimalField(max_digits=6, decimal_places=2, default=True, verbose_name='Вес по заявке')
+    age = models.DecimalField(max_digits=2, decimal_places=0, default=True, verbose_name='Возраст')
     message = models.TextField(max_length=128, blank=True, null=True, default=None, verbose_name='Сообщение')
     created = models.DateTimeField(default=timezone.now, verbose_name='Дата заявления')
     updated = models.DateTimeField(default=timezone.now, verbose_name='Дата редактирования')

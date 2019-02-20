@@ -9206,18 +9206,18 @@ textarea.form-control {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/*.header-menu-toggle::before {*/
-  /*display: inline-block;*/
-  /*content: "МЕНЮ";*/
-  /*height: 45px;*/
-  /*left: auto;*/
-  /*text-align: right;*/
-  /*padding-left: 15px;*/
-  /*padding-right: 10px;*/
-  /*position: absolute;*/
-  /*top: 0;*/
-  /*right: 100%;*/
-/*}*/
+.header-menu-toggle::before {
+  display: inline-block;
+  content: "МЕНЮ";
+  height: 45px;
+  left: auto;
+  text-align: right;
+  padding-left: 15px;
+  padding-right: 10px;
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
 .header-menu-toggle.opaque {
   background-color: #000000;
 }

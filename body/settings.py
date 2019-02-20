@@ -43,6 +43,8 @@ INSTALLED_APPS = [
 
     'landing',
     'zayavka',
+    'zayavka_regional',
+    'zayavka_sudia',
 ]
 
 MIDDLEWARE = [

@@ -22,7 +22,7 @@ admin.autodiscover()
 
 urlpatterns = [
 
-    url(r'^zayavka/$', views.zayavka, name='zayavka'),
+    url(r'^zayavka_regional/$', views.zayavka_regional, name='zayavka_regional'),
 
 ] \
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \

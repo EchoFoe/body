@@ -22,7 +22,8 @@ admin.autodiscover()
 
 urlpatterns = [
 
-    url(r'^zayavka/$', views.zayavka, name='zayavka'),
+    url(r'^zayavka_sudia/$', views.zayavka_sudia, name='zayavka_sudia'),
+
 
 ] \
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \

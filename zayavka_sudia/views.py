@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from .forms import *
-# from products.models import *
 
 
-def zayavka(request):
 
-    form = ZayavkaForm(request.POST or None)
+def zayavka_sudia(request):
+
+
+    form = Zayavka_sudiaForm(request.POST or None)
 
     if request.method == "POST" and form.is_valid():
         print(request.POST)
@@ -14,5 +15,5 @@ def zayavka(request):
         print(form.cleaned_data["first_name"])
         new_form = form.save()
 
-    return render(request, 'zayavka/zayavka.html', locals())
+    return render(request, 'zayavka_sudia/zayavka_sudia.html', locals())
 

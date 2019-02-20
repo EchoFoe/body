@@ -3,9 +3,10 @@ from .forms import *
 # from products.models import *
 
 
-def zayavka(request):
+def zayavka_regional(request):
 
-    form = ZayavkaForm(request.POST or None)
+
+    form = Zayavka_regionalForm(request.POST or None)
 
     if request.method == "POST" and form.is_valid():
         print(request.POST)
@@ -14,5 +15,5 @@ def zayavka(request):
         print(form.cleaned_data["first_name"])
         new_form = form.save()
 
-    return render(request, 'zayavka/zayavka.html', locals())
+    return render(request, 'zayavka_regional/zayavka_regional.html', locals())
 

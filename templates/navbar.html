@@ -1,30 +1,72 @@
 {% load static %}
 
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-{#    <div class="header-logo">#}
-{#        <a class="navbar-brand" href="{% url 'home' %}">#}
-{#            <img src="../static/images/logo_1.jpg" alt="Homepage">#}
-{#        </a>#}
+{#<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">#}
+{#    <div class="container">#}
+{#        <a class="navbar-brand" href="{% url 'home' %}"><img src="../static/images/GFP_Logo_155.png"></a>#}
+{#        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">#}
+{#        <span class="oi oi-menu"></span> Меню#}
+{#        </button>#}
+{#        <div class="collapse navbar-collapse" id="ftco-nav">#}
+{#            <ul class="navbar-nav ml-auto">#}
+                {#	          <li class="nav-item active"><a href="{% url 'home' %}" class="nav-link">Главная</a></li>#}
+                {#	          <li class="nav-item"><a href="{% url 'news' %}" class="nav-link">Новости</a></li>#}
+                {#	          <li class="nav-item"><a href="{% url 'calendar' %}" class="nav-link">Календарь соревнований</a></li>#}
+                {#	          <li class="nav-item"><a href="{% url 'documents' %}" class="nav-link">Документы</a></li>#}
+{#                <li class="nav-item"><a href="{% url 'zayavka' %}" class="nav-link">Он-лайн заявка</a></li>#}
+                {#	          <li class="nav-item"><a href="{% url 'representative' %}" class="nav-link">Руководство</a></li>#}
+{#                <li class="nav-item"><a href="{% url 'club' %}" class="nav-link">Атлетический клуб</a></li>#}
+{#                <li class="nav-item"><a href="{% url 'lk' %}" class="nav-link">Личный кабинет</a></li>#}
+{#                <li class="nav-item"><a href="{% url 'about_us' %}" class="nav-link">О федерации</a></li>#}
+{#            </ul>#}
+{#        </div>#}
 {#    </div>#}
-	      <a class="navbar-brand" href="{% url 'home' %}"><img src="../static/images/GFP_Logo_155.png"></a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Меню
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-{#	          <li class="nav-item active"><a href="{% url 'home' %}" class="nav-link">Главная</a></li>#}
-	          <li class="nav-item"><a href="{% url 'news' %}" class="nav-link">Новости</a></li>
-	          <li class="nav-item"><a href="{% url 'calendar' %}" class="nav-link">Календарь соревнований</a></li>
-	          <li class="nav-item"><a href="{% url 'documents' %}" class="nav-link">Документы</a></li>
-	          <li class="nav-item"><a href="{% url 'zayavka' %}" class="nav-link">Он-лайн заявка</a></li>
-	          <li class="nav-item"><a href="{% url 'representative' %}" class="nav-link">Руководство</a></li>
-	          <li class="nav-item"><a href="{% url 'club' %}" class="nav-link">Атлетический клуб</a></li>
-                <li class="nav-item"><a href="{% url 'lk' %}" class="nav-link">Личный кабинет</a></li>
-                <li class="nav-item"><a href="{% url 'about_us' %}" class="nav-link">О федерации</a></li>
-	        </ul>
-	      </div>
-		  </div>
-	  </nav>
-    <!-- END nav -->
+{#</nav>#}
+{#<!-- END nav -->#}
 
+<!-- header -->
+<header class="s-header">
+{#    <div class="header-logo">#}
+{#        <a class="site-logo" href="{% url 'home' %}">#}
+{#            <img src="../static/images/logo.png" alt="Homepage">#}
+{#        </a>#}
+{#    </div> <!-- Логотип -->#}
+    <nav class="header-nav">
+        <a href="#0" class="header-nav__close" title="close"><span>Закрыть</span></a>
+        <div class="header-nav__content">
+            <h2><img src="../static/images/GFP_Logo_155.png"></h2>
+            <ul class="header-nav__list">
+                <li class="current"><a class="js-scroll-trigger"  href="{% url 'home' %}" title="Домашняя">Домой</a></li>
+                <li><a class="js-scroll-trigger"  href="{% url 'news' %}" title="Новости">Новости</a></li>
+                <li><a class="js-scroll-trigger"  href="{% url 'calendar' %}" title="Календарь">Календарь соревнований</a></li>
+                <li><a class="js-scroll-trigger"  href="{% url 'documents' %}" title="Документы и нормативы">Документы</a></li>
+                <li><a class="js-scroll-trigger"  href="{% url 'zayavka' %}" title="Заявка на участие в соревнованиях">Он-лайн заявка на участие в соревнованиях</a></li>
+                <li><a class="js-scroll-trigger"  href="{% url 'zayavka_regional' %}" title="Он-лайн заявка на регионального представителя">Он-лайн заявка на регионального представителя</a></li>
+                <li><a class="js-scroll-trigger"  href="{% url 'zayavka_sudia' %}" title="Он-лайн заявка на судейство">Он-лайн заявка на судейство</a></li>
+                <li><a class="js-scroll-trigger"  href="{% url 'representative' %}" title="Руководство">Руководство</a></li>
+                <li><a class="js-scroll-trigger"  href="{% url 'lk' %}" title="Личный кабинет">Личный кабинет</a></li>
+                <li><a class="js-scroll-trigger"  href="{% url 'club' %}" title="Ателтический клуб StrongGenetic">Атлетический клуб</a></li>
+                <li><a class="js-scroll-trigger"  href="{% url 'about_us' %}" title="О нас">О Федерации</a></li>
+            </ul>
+            <p>Global Federation of Powerlifting - Всемирная Федерация пауэрлифтинга (силового троеборья)</p>
+{#            <ul class="header-nav__social">#}
+{#                <li>#}
+{#                    <a href="#0"><i class="fab fa-facebook"></i></a>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <a href="#0"><i class="fab fa-twitter"></i></a>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <a href="#0"><i class="fab fa-instagram"></i></a>#}
+{#                </li>#}
+{#                <li>#}
+{#                    <a href="#0"><i class="fab fa-vk"></i></a>#}
+{#                </li>#}
+{#            </ul>#}
+        </div> <!-- Навбар контент -->
+    </nav> <!-- Конец хэдера -->
+
+    <a class="header-menu-toggle" href="#0">
+        <span class="header-menu-icon"></span>
+    </a>
+
+</header>

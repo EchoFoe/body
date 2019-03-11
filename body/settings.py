@@ -43,6 +43,8 @@ INSTALLED_APPS = [
 
     'landing',
     'zayavka',
+    'zayavka_may',
+    'zayavka_june',
     'zayavka_regional',
     'zayavka_sudia',
 ]

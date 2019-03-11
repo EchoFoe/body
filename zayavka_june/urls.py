@@ -21,14 +21,8 @@ from django.conf import settings
 admin.autodiscover()
 
 urlpatterns = [
-    url(r'^representative/$', views.representative, name='representative'),
-    url(r'^news/$', views.news, name='news'),
-    url(r'^calendar/$', views.calendar, name='calendar'),
-    url(r'^documents/$', views.documents, name='documents'),
-    url(r'^about_us/$', views.about_us, name='about_us'),
-    url(r'^lk/$', views.lk, name='lk'),
-    url(r'^club/$', views.club, name='club'),
-    url(r'^$', views.home, name='home'),
+
+    url(r'^zayavka_june/$', views.zayavka_june, name='zayavka_june'),
 
 ] \
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \

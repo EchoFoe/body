@@ -3,170 +3,19 @@
 
 {% block content %}
 
+<!-- Хэдер к ЛК -->
 <section class="home-slider owl-carousel">
-
-      <div class="slider-item" style="background-image: url(../../static/images/about_us/);" data-stellar-background-ratio="0.5">
-      	<div class="overlay"></div>
+    <div class="slider-item" style="background-image: url(../../static/images/about_us/);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
         <div class="container">
-          <div class="row slider-text justify-content-center align-items-center">
-
-            <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<h1 class="mb-3 mt-5 bread">GFP</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Домашняя</a></span> <span>Личный кабинет находится в стадии разработки. Мы Вас оповестим когда он будет готов! </span></p>
+            <div class="row slider-text justify-content-center align-items-center">
+                <div class="col-md-7 col-sm-12 text-center ftco-animate">
+                    <h1 class="mb-3 mt-5 bread">GFP</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Домашняя</a></span> <span>Личный кабинет находится в стадии разработки. Мы Вас оповестим когда он будет готов! </span></p>
+                </div>
             </div>
-
-          </div>
         </div>
-      </div>
-    </section>
-
-
-{#    <section class="ftco-gallery">#}
-{#    	<div class="container-wrap">#}
-{#    		<div class="row no-gutters">#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#                    <a href="" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_1.jpg);">#}
-{#                        <div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#                        <span class="icon-search"></span>#}
-{#                    </div>#}
-{#                    </a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#                    <a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_2.jpg);">#}
-{#                        <div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#                        <span class="icon-search"></span>#}
-{#                    </div>#}
-{#                    </a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#                    <a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_3.jpg);">#}
-{#                        <div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#                        <span class="icon-search"></span>#}
-{#                    </div>#}
-{#                    </a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#                    <a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_4.jpg);">#}
-{#                        <div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#                        <span class="icon-search"></span>#}
-{#                    </div>#}
-{#                    </a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_5.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_6.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_7.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_8.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_9.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_10.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_11.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_12.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_13.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_14.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_15.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_16.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_17.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_18.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_19.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                <div class="col-md-3 ftco-animate">#}
-{#						<a href="#" class="gallery img d-flex align-items-center" style="background-image: url(../../static/images/section_10/gallery_gfp_img_20.jpg);">#}
-{#							<div class="icon mb-4 d-flex align-items-center justify-content-center">#}
-{#    						<span class="icon-search"></span>#}
-{#    					</div>#}
-{#						</a>#}
-{#                </div>#}
-{#                </div>#}
-{#    	</div>#}
-{#    </section>#}
-
+    </div>
+</section>
 
 {% endblock content %}

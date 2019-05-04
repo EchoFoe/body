@@ -1,3 +1,42 @@
+{#{% extends 'base.html' %}#}
+{#{% load static %}#}
+{##}
+{#{% block content %}#}
+{##}
+{#<!-- Хэдер к новостям (news) -->#}
+{#<section class="home-slider owl-carousel">#}
+{#    <div class="slider-item" style="background-image: url(../../static/images/news/news_gfp_img_1.jpg);" data-stellar-background-ratio="0.5">#}
+{#        <div class="overlay"></div>#}
+{#        <div class="container">#}
+{#            <div class="row slider-text justify-content-center align-items-center">#}
+{#                <div class="col-md-7 col-sm-12 text-center ftco-animate">#}
+{#                    <h1 class="mb-3 mt-5 bread">Новости GFP</h1>#}
+{#                    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Домашняя</a></span> <span>Новости</span></p>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
+{##}
+{#<!-- Новости (item) -->#}
+{#<section class="ftco-section">#}
+{#    <div class="container">#}
+{#        <div class="row justify-content-center mb-5 pb-3">#}
+{#            <div class="col-md-7 heading-section ftco-animate text-center">#}
+{#                <h2 class="mb-4">Последние новости федерации</h2>#}
+{#                <p>Всегда будьте в курсе последних новостей из мира Powerlifting!</p>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="row d-flex">#}
+{#            {% for news_images in news_images_1 %}#}
+{#                {% include 'news/news_item.html' %}#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
+{##}
+{#{% endblock content %}#}
+
 {% extends 'base.html' %}
 {% load static %}
 
@@ -18,7 +57,7 @@
     </div>
 </section>
 
-<!-- Новости (item) -->
+<!-- Новости (section_9) -->
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
@@ -28,9 +67,97 @@
             </div>
         </div>
         <div class="row d-flex">
-            {% for news_images in news_images_1 %}
-                {% include 'news/news_item.html' %}
-            {% endfor %}
+{#                    {% for news_images in news_images_1 %}#}
+{#                        {% include 'news/news_item.html' %}#}
+{#                    {% endfor %}#}
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry align-self-stretch">
+                    <a href="{% url 'news' %}" class="block-20" style="background-image: url('../../static/images/section_9/news_gfp_img_6.jpg');">
+                    </a>
+                    <div class="text py-4 d-block">
+                        <div class="meta">
+                            <div><a href="{% url 'news' %}">Июнь 21-22, 2019.</a></div>
+                            <div><a href="{% url 'news' %}">Г. Курск</a></div>
+                        {#                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>#}
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">Чемпионат ЦФО по пауэрлифтингу и его отдельным движениям</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry align-self-stretch">
+                    <a href="{% url 'news' %}" class="block-20" style="background-image: url('../../static/images/section_9/news_gfp_img_5.jpg');">
+                    </a>
+                    <div class="text py-4 d-block">
+                        <div class="meta">
+                            <div><a href="{% url 'news' %}">Май 11-12, 2019.</a></div>
+                            <div><a href="{% url 'news' %}">Г. Брянск</a></div>
+{#                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>#}
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">Открытый мастерский турнир по пауэрлифтингу и его отдельным движениям</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry align-self-stretch">
+                    <a href="{% url 'news' %}" class="block-20" style="background-image: url('../../static/images/section_9/news_gfp_img_4.jpg');">
+                    </a>
+                    <div class="text py-4 d-block">
+                        <div class="meta">
+                            <div><a href="{% url 'news' %}">Март 1-2, 2019.</a></div>
+                            <div><a href="{% url 'news' %}">Г. Курск</a></div>
+{#                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>#}
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">Турнир по пауэрлифтингу и его отдельным движениям. По версии GFP</a></h3>
+                        <p>В марте 2019 года состоялся турнир по пауэрлифтингу</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry align-self-stretch">
+                    <a href="{% url 'news' %}" class="block-20" style="background-image: url('../../static/images/section_9/news_gfp_img_1.jpg');">
+                    </a>
+                    <div class="text py-4 d-block">
+                        <div class="meta">
+                            <div><a href="{% url 'news' %}">Сентябрь 21-23, 2018.</a></div>
+                            <div><a href="{% url 'news' %}">Г. Балабаново</a></div>
+{#                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>#}
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">Кубок России по Powerlifting и Всероссийский мастерский турнир по армлифтингу по версиям WAF и "Союза армлифтеров России"</a></h3>
+                        <p>Соревнования проводились по следующим дисциплинам: силовое двоеборье, жим лежа, народный жим и становая тяга по версиям GPA/IPO (присвоения до Элиты России включительно)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry align-self-stretch">
+                    <a href="{% url 'news' %}" class="block-20" style="background-image: url('../../static/images/section_9/news_gfp_img_2.jpg');">
+                    </a>
+                    <div class="text py-4 d-block">
+                        <div class="meta">
+                            <div><a href="{% url 'news' %}">Июнь 16-17, 2018.</a></div>
+                            <div><a href="{% url 'news' %}">Г. Орел</a></div>
+{#                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>#}
+                        </div>
+                    <h3 class="heading mt-2"><a href="#">GFP провела турнир "Орловская крепость"</a></h3>
+                    <p>Турнир прошел по следующим движениям: по пауэрлифтингу, его отдельным движениям, силовому двоеборью и народному жиму по версиям федераций GPA/IPO и "Союз пауэрлифтеров России", а так же открытый мастерский турнир "Орловская крепость" по армлифтингу по версии федерации "Союз армлифтеров России".</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry align-self-stretch">
+                    <a href="{% url 'news' %}" class="block-20" style="background-image: url('../../static/images/section_9/news_gfp_img_3.jpg');">
+                    </a>
+                    <div class="text py-4 d-block">
+                        <div class="meta">
+                            <div><a href="{% url 'news' %}">Апрель 20, 2018.</a></div>
+                            <div><a href="{% url 'news' %}">Г. Курск</a></div>
+{#                                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>#}
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">Турнир "Наследие предков"</a></h3>
+                        <p>Подготовка заняла три месяца. Для кого-то это были первые соревнования, первые шаги в мир железного спорта и начало пути к великим свершениям</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

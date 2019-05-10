@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^about_us/$', views.about_us, name='about_us'),
     url(r'^lk/$', views.lk, name='lk'),
     url(r'^club/$', views.club, name='club'),
+    url(r'^broadcast/$', views.broadcast, name='broadcast'),
     url(r'^$', views.home, name='home'),
 
 ] \

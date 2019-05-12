@@ -24,7 +24,7 @@ class Zayavka_may(models.Model):
     updated = models.DateTimeField(default=timezone.now, verbose_name='Дата редактирования')
 
     def __str__(self):
-        return "Спортсмен(ка): %s %s, почта: %s" % (self.first_name, self.last_name, self.email)
+        return "Спортсмен(ка): %s %s, вес: %s, Уилкс: %s" % (self.first_name, self.last_name, self.weight, self.wilkes)
 
     class Meta:
         verbose_name = 'Он-лайн заявка на участие в турнире на май'

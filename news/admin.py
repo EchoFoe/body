@@ -23,17 +23,17 @@ class NewsImageInline(admin.TabularInline):
 
     admin.site.register(NewsCategory, NewsCategoryAdmin)
 
-# class NewsAdmin(admin.ModelAdmin):
-#     inlines = [NewsImageInline]
-#     list_display = ['news_name', 'news_town', 'news_category', 'news_summary_short', 'news_time', 'news_created']
-#     list_filter = ['news_name', 'news_town', 'news_category']
-#     search_fields = ['news_name', 'news_town', 'news_category']
-#
-#     class Meta:
-#         model = News
-#
-#
-# admin.site.register(News, NewsAdmin)
+class NewsAdmin(admin.ModelAdmin):
+    inlines = [NewsImageInline]
+    list_display = ['news_name', 'news_town', 'news_summary_short', 'news_time']
+    list_filter = ['news_name', 'news_town', 'news_category']
+    search_fields = ['news_name', 'news_town', 'news_category']
+
+    class Meta:
+        model = News
+
+
+admin.site.register(News, NewsAdmin)
 
 # class NewsResource(resources.ModelResource):
 #     category = fields.Field(column_name='category', attribute='category',
@@ -46,19 +46,19 @@ class NewsImageInline(admin.TabularInline):
 #         # import_id_fields = ['uuid']
 
 
-class NewsAdmin(ImportExportActionModelAdmin):
-    # resource_class = NewsResource
-    # list_display = [field.name for field in News._meta.fields if field.name != "id"]
-    list_display = ['news_name', 'news_town', 'news_summary_short', 'news_time']
-    inlines = [NewsImageInline]
-    list_filter = ['news_town', 'news_time', 'news_name']
-    search_fields = ['news_name', 'news_town']
+# class NewsAdmin(ImportExportActionModelAdmin):
+#     resource_class = NewsResource
+#     # list_display = [field.name for field in News._meta.fields if field.name != "id"]
+#     list_display = ['news_name', 'news_town', 'news_summary_short', 'news_time']
+#     inlines = [NewsImageInline]
+#     list_filter = ['news_town', 'news_time', 'news_name']
+#     search_fields = ['news_name', 'news_town']
+#
+#     class Meta:
+#         model = News
 
-    class Meta:
-        model = News
-
-
-admin.site.register(News, NewsAdmin)
+#
+# admin.site.register(News, NewsAdmin)
 
 
 class NewsImageAdmin(admin.ModelAdmin):

@@ -35,19 +35,19 @@ class NewsImageInline(admin.TabularInline):
 #
 # admin.site.register(News, NewsAdmin)
 
-class NewsResource(resources.ModelResource):
-    category = fields.Field(column_name='category', attribute='category',
-                            widget=ForeignKeyWidget(NewsCategory, 'name'))
-
-    class Meta:
-        model = News
-        # fields = [field.name for field in News._meta.fields if field.name != "id"]
-        # exclude = ['id']
-        # import_id_fields = ['uuid']
+# class NewsResource(resources.ModelResource):
+#     category = fields.Field(column_name='category', attribute='category',
+#                             widget=ForeignKeyWidget(NewsCategory, 'name'))
+#
+#     class Meta:
+#         model = News
+#         # fields = [field.name for field in News._meta.fields if field.name != "id"]
+#         # exclude = ['id']
+#         # import_id_fields = ['uuid']
 
 
 class NewsAdmin(ImportExportActionModelAdmin):
-    resource_class = NewsResource
+    # resource_class = NewsResource
     # list_display = [field.name for field in News._meta.fields if field.name != "id"]
     list_display = ['news_name', 'news_town', 'news_summary_short', 'news_time']
     inlines = [NewsImageInline]

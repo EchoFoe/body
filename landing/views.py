@@ -1,20 +1,20 @@
 from django.shortcuts import render
 from .forms import *
-# from news.models import *
-# from tournaments.models import *
-# from documents.models import *
+from news.models import *
+from tournaments.models import *
+from documents.models import *
 
 
 def home(request):
 
-    # news_images = NewsImage.objects.filter(mews_image_is_active=True, news_image_is_main=True, News__news_is_active=True)
-    # news_images_1 = news_images.filter(News__news_category__id=1)
-    #
-    # tournaments_view = Tournaments.objects.filter(tournaments_is_active=True)
-    # tournaments_view_new = tournaments_view.filter(tournaments_status_id=1)
-    # tournaments_view_held = tournaments_view.filter(tournaments_status__is_active=True, tournaments_status_id=2)
-    # tournaments_view_canceled = tournaments_view.filter(tournaments_status_id=3)
-    # tournaments_view_failed = tournaments_view.filter(tournaments_status_id=4)
+    news_images = NewsImage.objects.filter(mews_image_is_active=True, news_image_is_main=True, News__news_is_active=True)
+    news_images_1 = news_images.filter(News__news_category__id=1)
+
+    tournaments_view = Tournaments.objects.filter(tournaments_is_active=True)
+    tournaments_view_new = tournaments_view.filter(tournaments_status_id=1)
+    tournaments_view_held = tournaments_view.filter(tournaments_status__is_active=True, tournaments_status_id=2)
+    tournaments_view_canceled = tournaments_view.filter(tournaments_status_id=3)
+    tournaments_view_failed = tournaments_view.filter(tournaments_status_id=4)
 
     form = SubscriberForm(request.POST or None)
 
@@ -29,9 +29,9 @@ def home(request):
 
 def news(request):
 
-    # news_images = NewsImage.objects.filter(mews_image_is_active=True, news_image_is_main=True,
-    #                                        News__news_is_active=True)
-    # news_images_1 = news_images.filter(News__news_category__id=1)
+    news_images = NewsImage.objects.filter(mews_image_is_active=True, news_image_is_main=True,
+                                           News__news_is_active=True)
+    news_images_1 = news_images.filter(News__news_category__id=1)
 
     form = SubscriberForm(request.POST or None)
 
@@ -46,8 +46,8 @@ def news(request):
 
 def calendar(request):
 
-    # tournaments_view = Tournaments.objects.filter(tournaments_is_active=True)
-    # tournaments_view_new = tournaments_view.filter(tournaments_status_id=1)
+    tournaments_view = Tournaments.objects.filter(tournaments_is_active=True)
+    tournaments_view_new = tournaments_view.filter(tournaments_status_id=1)
 
     form = SubscriberForm(request.POST or None)
 

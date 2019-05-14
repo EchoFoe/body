@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Хэдер к новостям (news) -->
+<section class="home-slider owl-carousel">
+    <div class="slider-item" style="background-image: url(../../static/images/news/news_gfp_img_1.jpg);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text justify-content-center align-items-center">
+                <div class="col-md-7 col-sm-12 text-center ftco-animate">
+                    <h1 class="mb-3 mt-5 bread">Новости GFP</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Домашняя</a></span> <span>Новости</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Новости (full_item) -->
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <h2 class="mb-4">Последние новости федерации</h2>
+                <p>Всегда будьте в курсе последних новостей из мира Powerlifting!</p>
+            </div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-md-12 d-flex ftco-animate">
+                <div class="blog-entry align-self-stretch">
+                    {% for image_item in news_plural.newsimage_set.all %}
+                        <a href="#" class="block-25" style="background-image: url({{ image_item.news_image.url }});"></a>
+                    {% endfor %}
+                    <div class="text py-4 d-block">
+                        <div class="meta">
+                            <div><a href="#">{{ news_plural.news_time|date:"F j, Y" }}. Г. {{ news_plural.news_town }}</a></div>
+            {#                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>#}
+                        </div>
+                        <h3 class="heading mt-2"><a href="#">{{ news_plural.news_name }}</a></h3>
+                        <p>{{ news_plural.news_summary }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

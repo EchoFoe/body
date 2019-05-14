@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .forms import *
-# from products.models import *
 
 
 def zayavka_may(request):
@@ -15,4 +14,3 @@ def zayavka_may(request):
         new_form = form.save()
 
     return render(request, 'zayavka_may/zayavka_may.html', locals())
-

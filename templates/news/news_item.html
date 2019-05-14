@@ -1,0 +1,19 @@
+{% block content %}
+{% load static %}
+
+<!-- Новости (item) -->
+<div class="col-md-4 d-flex ftco-animate">
+    <div class="blog-entry align-self-stretch">
+        <a id="News.id" href="{% url 'novelty' news_images.News.id %}" class="block-20" style="background-image: url({{ news_images.news_image.url }});"></a>
+        <div class="text py-4 d-block">
+            <div class="meta">
+                <div><a href="#">{{ news_images.News.news_time|date:"F j, Y" }}. Г. {{ news_images.News.news_town }}</a></div>
+{#                <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>#}
+            </div>
+            <h3 class="heading mt-2"><a href="#">{{ news_images.News.news_name }}</a></h3>
+            <p>{{ news_images.News.news_summary|truncatechars_html:80 }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

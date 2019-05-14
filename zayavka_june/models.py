@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-
 class Zayavka_june(models.Model):
     email = models.EmailField(max_length=128, default=True, verbose_name='Емейл')
     first_name = models.CharField(max_length=128, default=True, verbose_name='Имя')

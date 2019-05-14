@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Хэдер к календарю (section_6) -->
+<section class="home-slider owl-carousel">
+    <div class="slider-item" style="background-image: url(../../static/images/calendar/calendar_gfp_img_1.jpg);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text justify-content-center align-items-center">
+                <div class="col-md-7 col-sm-12 text-center ftco-animate">
+                    <h1 class="mb-3 mt-5 bread">Календарь соревнований</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Домашняя</a></span> <span>Календарь соревнований</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Календарь (section_6) -->
+<section class="ftco-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 pr-md-5">
+                <div class="heading-section text-md-right ftco-animate">
+{#                    <span class="subheading">Соревнования</span>#}
+                    <h2 class="mb-4">Календарь соревнований на 2019 год</h2>
+                    <p class="mb-4">Мы рады Вам представить список соревнований по пауэрлифтингу</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="program d-flex ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-gym"></span>
+                    </div>
+                    <div class="text ml-5">
+                        <h3>11-12 мая, 2019</h3>
+                        <p>Открытый мастерский турнир Брянской области с прохождением (и без) допинг-контроля по пауэрлифтингу, его отдельным движениям жиму лежа, становой тяге, двоеборью, силовому двоеборью и жиму СФО по версии GFP (присвоение до КМС включительно), г. Брянск</p>
+                        <h3>Спонсор: Strong Genetic</h3>
+                        <p><a href="{% url 'zayavka_may' %}" class="btn btn-primary btn-outline-primary px-4 py-3">Подать заявку на участие</a></p>
+                        <h3>Положения GFP на турнир 11-12 мая 2019 с прохождением допинг-контроля</h3>
+                        <p><a href="../../static/images/documents/Omt_dk_bryansk_11-12_05_2019.docx" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
+                        <h3>Положения GFP на турнир 11-12 мая 2019 без прохождения допинг-контроля</h3>
+                        <p><a href="../../static/images/documents/Omt_bryansk_11-12_05_2019.docx" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
+{#                        <p><a href="{% url 'zayavka_may' %}" class="btn btn-primary btn-outline-primary px-4 py-3">Подать заявку на участие</a></p>#}
+                    </div>
+                </div>
+                <div class="program d-flex ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-gym"></span>
+                    </div>
+                    <div class="text ml-5">
+                        <h3>21-22 июня, 2019</h3>
+                        <p>Чемпионат Центрального Федерального Округа «Global Federation of Powerlifting» с прохождением (и без) допинг-контроля по пауэрлифтингу, его отдельным движениям жиму лежа, становой тяге, двоеборью, силовому двоеборьюи жиму СФО по версии GFP (присвоение до МС включительно), г. Курск</p>
+                        <h3>Спонсор: Strong Genetic</h3>
+                        <p><a href="{% url 'zayavka_june' %}" class="btn btn-primary btn-outline-primary px-4 py-3">Подать заявку на участие</a></p>
+                        <h3>Положения GFP на турнир 21-22 июня 2019 с прохождением допинг-контроля</h3>
+                        <p><a href="../../static/images/documents/Chemp_tsfo_dk_Kursk_21-22_06_2019.docx" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
+                        <h3>Положения GFP на турнир 21-22 июня без прохождения допинг-контроля</h3>
+                        <p><a href="../../static/images/documents/Chemp_tsfo_Kursk_21-22_06_2019.docx" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
+                    </div>
+                </div>
+{#                <div class="program d-flex ftco-animate">#}
+{#                    <div class="icon d-flex justify-content-center align-items-center">#}
+{#                        <span class="flaticon-gym"></span>#}
+{#                    </div>#}
+{#                    <div class="text ml-5">#}
+{#                        <h3>15-17.03.2019 (присвоение до МСМК включительно)</h3>#}
+{#                        <p>Всероссийский мастерский турнир среди клубов World Class по жиму лежа без экипировки, становой тяге и народному жиму по версии rpf, Москва</p>#}
+{#                        <p><a href="{% url 'zayavka' %}" class="btn btn-primary btn-outline-primary px-4 py-3">Подать заявку на участие</a></p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="program d-flex ftco-animate">#}
+{#                    <div class="icon d-flex justify-content-center align-items-center">#}
+{#                        <span class="flaticon-workout"></span>#}
+{#                    </div>#}
+{#                    <div class="text ml-5">#}
+{#                        <h3>Weight Lifting</h3>#}
+{#                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="program d-flex ftco-animate">#}
+{#                    <div class="icon d-flex justify-content-center align-items-center">#}
+{#                        <span class="flaticon-meditation"></span>#}
+{#                    </div>#}
+{#                    <div class="text ml-5">#}
+{#                        <h3>Yoga Classes</h3>#}
+{#                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="program d-flex ftco-animate">#}
+{#                    <div class="icon d-flex justify-content-center align-items-center">#}
+{#                        <span class="flaticon-stationary-bike"></span>#}
+{#                    </div>#}
+{#                    <div class="text ml-5">#}
+{#                        <h3>Cardio Training</h3>#}
+{#                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>#}
+{#                    </div>#}
+{#                </div>#}
+            </div>
+        </div>
+{#        <div class="row mt-5">#}
+{#            <div class="col text-center">#}
+{#                <div class="block-27">#}
+{#                    <ul>#}
+{#                        <li><a href="#">&lt;</a></li>#}
+{#                        <li class="active"><span>1</span></li>#}
+{#                        <li><a href="#">2</a></li>#}
+{#                        <li><a href="#">3</a></li>#}
+{#                        <li><a href="#">4</a></li>#}
+{#                        <li><a href="#">5</a></li>#}
+{#                        <li><a href="#">&gt;</a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+    </div>
+</section>
+
+{% endblock content %}{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Хэдер к календарю (section_6) -->
+<section class="home-slider owl-carousel">
+    <div class="slider-item" style="background-image: url(../../static/images/calendar/calendar_gfp_img_1.jpg);" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text justify-content-center align-items-center">
+                <div class="col-md-7 col-sm-12 text-center ftco-animate">
+                    <h1 class="mb-3 mt-5 bread">Календарь соревнований</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Домашняя</a></span> <span>Календарь соревнований</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Календарь (section_6) -->
+<section class="ftco-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 pr-md-5">
+                <div class="heading-section text-md-right ftco-animate">
+{#                    <span class="subheading">Соревнования</span>#}
+                    <h2 class="mb-4">Календарь соревнований на 2019 год</h2>
+                    <p class="mb-4">Мы рады Вам представить список соревнований по пауэрлифтингу</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="program d-flex ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-gym"></span>
+                    </div>
+                    <div class="text ml-5">
+                        <h3>11-12 мая, 2019</h3>
+                        <p>Открытый мастерский турнир Брянской области с прохождением (и без) допинг-контроля по пауэрлифтингу, его отдельным движениям жиму лежа, становой тяге, двоеборью, силовому двоеборью и жиму СФО по версии GFP (присвоение до КМС включительно), г. Брянск</p>
+                        <h3>Спонсор: Strong Genetic</h3>
+                        <p><a href="{% url 'zayavka_may' %}" class="btn btn-primary btn-outline-primary px-4 py-3">Подать заявку на участие</a></p>
+                        <h3>Положения GFP на турнир 11-12 мая 2019 с прохождением допинг-контроля</h3>
+                        <p><a href="../../static/images/documents/Omt_dk_bryansk_11-12_05_2019.docx" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
+                        <h3>Положения GFP на турнир 11-12 мая 2019 без прохождения допинг-контроля</h3>
+                        <p><a href="../../static/images/documents/Omt_bryansk_11-12_05_2019.docx" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
+{#                        <p><a href="{% url 'zayavka_may' %}" class="btn btn-primary btn-outline-primary px-4 py-3">Подать заявку на участие</a></p>#}
+                    </div>
+                </div>
+                <div class="program d-flex ftco-animate">
+                    <div class="icon d-flex justify-content-center align-items-center">
+                        <span class="flaticon-gym"></span>
+                    </div>
+                    <div class="text ml-5">
+                        <h3>21-22 июня, 2019</h3>
+                        <p>Чемпионат Центрального Федерального Округа «Global Federation of Powerlifting» с прохождением (и без) допинг-контроля по пауэрлифтингу, его отдельным движениям жиму лежа, становой тяге, двоеборью, силовому двоеборьюи жиму СФО по версии GFP (присвоение до МС включительно), г. Курск</p>
+                        <h3>Спонсор: Strong Genetic</h3>
+                        <p><a href="{% url 'zayavka_june' %}" class="btn btn-primary btn-outline-primary px-4 py-3">Подать заявку на участие</a></p>
+                        <h3>Положения GFP на турнир 21-22 июня 2019 с прохождением допинг-контроля</h3>
+                        <p><a href="../../static/images/documents/Chemp_tsfo_dk_Kursk_21-22_06_2019.docx" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
+                        <h3>Положения GFP на турнир 21-22 июня без прохождения допинг-контроля</h3>
+                        <p><a href="../../static/images/documents/Chemp_tsfo_Kursk_21-22_06_2019.docx" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
+                    </div>
+                </div>
+{#                <div class="program d-flex ftco-animate">#}
+{#                    <div class="icon d-flex justify-content-center align-items-center">#}
+{#                        <span class="flaticon-gym"></span>#}
+{#                    </div>#}
+{#                    <div class="text ml-5">#}
+{#                        <h3>15-17.03.2019 (присвоение до МСМК включительно)</h3>#}
+{#                        <p>Всероссийский мастерский турнир среди клубов World Class по жиму лежа без экипировки, становой тяге и народному жиму по версии rpf, Москва</p>#}
+{#                        <p><a href="{% url 'zayavka' %}" class="btn btn-primary btn-outline-primary px-4 py-3">Подать заявку на участие</a></p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="program d-flex ftco-animate">#}
+{#                    <div class="icon d-flex justify-content-center align-items-center">#}
+{#                        <span class="flaticon-workout"></span>#}
+{#                    </div>#}
+{#                    <div class="text ml-5">#}
+{#                        <h3>Weight Lifting</h3>#}
+{#                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="program d-flex ftco-animate">#}
+{#                    <div class="icon d-flex justify-content-center align-items-center">#}
+{#                        <span class="flaticon-meditation"></span>#}
+{#                    </div>#}
+{#                    <div class="text ml-5">#}
+{#                        <h3>Yoga Classes</h3>#}
+{#                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="program d-flex ftco-animate">#}
+{#                    <div class="icon d-flex justify-content-center align-items-center">#}
+{#                        <span class="flaticon-stationary-bike"></span>#}
+{#                    </div>#}
+{#                    <div class="text ml-5">#}
+{#                        <h3>Cardio Training</h3>#}
+{#                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>#}
+{#                    </div>#}
+{#                </div>#}
+            </div>
+        </div>
+{#        <div class="row mt-5">#}
+{#            <div class="col text-center">#}
+{#                <div class="block-27">#}
+{#                    <ul>#}
+{#                        <li><a href="#">&lt;</a></li>#}
+{#                        <li class="active"><span>1</span></li>#}
+{#                        <li><a href="#">2</a></li>#}
+{#                        <li><a href="#">3</a></li>#}
+{#                        <li><a href="#">4</a></li>#}
+{#                        <li><a href="#">5</a></li>#}
+{#                        <li><a href="#">&gt;</a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+    </div>
+</section>
+
+{% endblock content %}

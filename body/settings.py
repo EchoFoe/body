@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'jquery',
+    'import_export',
 
     'landing',
     'zayavka',
@@ -47,6 +47,10 @@ INSTALLED_APPS = [
     'zayavka_june',
     'zayavka_regional',
     'zayavka_sudia',
+    'news',
+    'tournaments',
+    'members',
+    'documents',
 ]
 
 MIDDLEWARE = [

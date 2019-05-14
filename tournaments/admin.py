@@ -76,24 +76,40 @@ class MemberInTournamentsInline(admin.TabularInline):
 #
 # admin.site.register(News, NewsAdmin)
 
-class TournamentsResource(resources.ModelResource):
-    category = fields.Field(column_name='tournaments_categories', attribute='tournaments_categories',
-                            widget=ManyToManyWidget(TournamentsCategory, 'name'))
-    record = fields.Field(column_name='Уровень рекордов', attribute='tournaments_records',
-                            widget=ForeignKeyWidget(TournamentsCategory, 'name'))
-    division = fields.Field(column_name='tournaments_divisions', attribute='tournaments_divisions',
-                            widget=ManyToManyWidget(TournamentsDivision, 'name'))
-
-    class Meta:
-        model = Tournaments
+# class TournamentsResource(resources.ModelResource):
+#     category = fields.Field(column_name='tournaments_categories', attribute='tournaments_categories',
+#                             widget=ManyToManyWidget(TournamentsCategory, 'name'))
+#     record = fields.Field(column_name='Уровень рекордов', attribute='tournaments_records',
+#                             widget=ForeignKeyWidget(TournamentsCategory, 'name'))
+#     division = fields.Field(column_name='tournaments_divisions', attribute='tournaments_divisions',
+#                             widget=ManyToManyWidget(TournamentsDivision, 'name'))
+#
+#     class Meta:
+#         model = Tournaments
         # fields = [field.name for field in Tournaments._meta.fields if field.name != "id"]
         # exclude = ['id']
         # import_id_fields = ['uuid']
 
 
-class TournamentsAdmin(ImportExportActionModelAdmin):
+# class TournamentsAdmin(ImportExportActionModelAdmin):
+#     filter_horizontal = ('tournaments_divisions', 'tournaments_federations', 'tournaments_categories',)
+#     resource_class = TournamentsResource
+#     # list_display = [field.name for field in News._meta.fields if field.name != "id"]
+#     # fields = ['tournaments_categories']
+#     list_display = ['Турнир', 'Дивизионы', 'tournaments_records', 'tournaments_town', 'tournaments_time_begin', 'tournaments_time_end', 'tournaments_status']
+#     inlines = [MemberInTournamentsInline]
+#     list_filter = ['tournaments_name', 'tournaments_town', 'tournaments_categories', 'tournaments_status']
+#     search_fields = ['tournaments_name', 'tournaments_town', 'tournaments_categories', 'tournaments_status']
+#
+#     class Meta:
+#         model = Tournaments
+#
+#
+# admin.site.register(Tournaments, TournamentsAdmin)
+
+class TournamentsAdmin(admin.ModelAdmin):
     filter_horizontal = ('tournaments_divisions', 'tournaments_federations', 'tournaments_categories',)
-    resource_class = TournamentsResource
+    # resource_class = TournamentsResource
     # list_display = [field.name for field in News._meta.fields if field.name != "id"]
     # fields = ['tournaments_categories']
     list_display = ['Турнир', 'Дивизионы', 'tournaments_records', 'tournaments_town', 'tournaments_time_begin', 'tournaments_time_end', 'tournaments_status']
@@ -106,7 +122,6 @@ class TournamentsAdmin(ImportExportActionModelAdmin):
 
 
 admin.site.register(Tournaments, TournamentsAdmin)
-
 
 class TournamentsMemberAdmin(admin.ModelAdmin):
     # list_display = [field.name for field in MemberInTournaments._meta.fields]

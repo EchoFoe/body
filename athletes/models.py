@@ -60,8 +60,8 @@ class Discipline(models.Model):
         return "%s" % self.name
 
     class Meta:
-        verbose_name = 'Дивизион'
-        verbose_name_plural = 'Дивизионы'
+        verbose_name = 'Дисциплина'
+        verbose_name_plural = 'Дисциплины'
 
 class Age_category(models.Model):
     name = models.CharField(max_length=128, blank=True, default=True, verbose_name="Возрастная категория")
@@ -74,6 +74,17 @@ class Age_category(models.Model):
         verbose_name = 'Возрастная категория'
         verbose_name_plural = 'Возрастные категории'
 
+class Weight_category(models.Model):
+    name = models.CharField(max_length=128, blank=True, default=True, verbose_name="Возрастная категория")
+    is_active = models.BooleanField(default=True, verbose_name='Актуальность')
+
+    def __str__(self):
+        return "%s" % self.name
+
+    class Meta:
+        verbose_name = 'Весовая категория'
+        verbose_name_plural = 'Весовые категории'
+
 class Athletes(models.Model):
     email = models.EmailField(max_length=128, default=True, verbose_name='Емейл')
     phone = models.CharField(max_length=18, default=True, verbose_name='Номер телефона')
@@ -85,10 +96,9 @@ class Athletes(models.Model):
     birthday = models.DateField(default=None, null=True, blank=True, verbose_name='Дата рождения')
     age = models.DecimalField(max_digits=2, decimal_places=0, default=True, verbose_name='Возраст')
     age_category = models.ManyToManyField(Age_category, blank=True, default=True, verbose_name='Возраст. кат-рия')
-    raised_weight = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True, default=00.00,
-                                        verbose_name='Поднятый вес (общий)')
-    wilkes = models.DecimalField(max_digits=6, decimal_places=2, default=00.00, blank=True, null=True,
-                                 verbose_name='Коэффициент Уилкса')
+    weight_category = models.ForeignKey(Weight_category, default=1, on_delete=models.CASCADE, verbose_name='Вес. категория')
+    raised_weight = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True, default=00.00, verbose_name='Поднятый вес (общий)')
+    wilkes = models.DecimalField(max_digits=6, decimal_places=2, default=00.00, blank=True, null=True, verbose_name='Коэффициент Уилкса')
     country = models.CharField(max_length=32, default=True, verbose_name='Страна')
     region = models.CharField(max_length=32, default=True, verbose_name='Область/Регион')
     town = models.CharField(max_length=32, default=True, verbose_name='Город')

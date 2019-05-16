@@ -3,7 +3,6 @@ from .forms import *
 from news.models import *
 from tournaments.models import *
 from representative.models import *
-from documents.models import *
 
 
 def home(request):

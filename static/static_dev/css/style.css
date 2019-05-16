@@ -207,6 +207,7 @@ button:focus {
 input,
 button,
 select,
+option,
 optgroup,
 textarea {
   margin: 0;
@@ -8611,7 +8612,7 @@ textarea.form-control {
 
 .contact-form .form-control {
   border: transparent !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-bottom: 1px solid #f7941d !important;
   height: 58px !important;
   padding-left: 0;
   padding-right: 0;
@@ -9324,3 +9325,5 @@ textarea.form-control {
     right: 20px;
   }
 }
+
+

@@ -12,7 +12,8 @@ urlpatterns = [
     url(r'^', include('zayavka_may.urls')),
     url(r'^', include('zayavka_june.urls')),
     url(r'^', include('news.urls')),
-    url(r'^', include('tournaments.urls'))
+    url(r'^', include('tournaments.urls')),
+    url(r'^', include('athletes.urls')),
 ]\
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
               + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

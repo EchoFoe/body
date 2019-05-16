@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .forms import *
-# from products.models import *
 
 
 def zayavka_june(request):

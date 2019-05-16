@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'import_export',
     'fixture_magic',
     'phonenumber_field',
+    'birthday',
 
     'landing',
     'zayavka',
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
     'members',
     'documents',
     'representative',
+    'athletes',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{#<section class="home-slider owl-carousel">#}
+{##}
+{#    <div class="slider-item" style="background-image: url(../../static/images/section_9/news_gfp_img_6.jpg);" data-stellar-background-ratio="0.5">#}
+{#        <div class="overlay"></div>#}
+{#        <div class="container">#}
+{#            <div class="row slider-text justify-content-center align-items-center">#}
+{##}
+{#                <div class="col-md-7 col-sm-12 text-center ftco-animate">#}
+{#                    <h1 class="mb-3 mt-5 bread">ОН-ЛАЙН ЗАЯВКА</h1>#}
+{#                    <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'home' %}">Домашняя</a></span> <span>Он-лайн заявка</span></p>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
+
+<section class="ftco-section contact-section">
+    <div class="container mt-5">
+        <div class="row block-9">
+            <div class="col-md-4 contact-info ftco-animate">
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <h2 class="h4">Контактная информация:</h2>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <p><span>Адрес:</span> 305038 Мыльникова, 2, Курск, Россия</p>
+                    </div>
+                {#	            <div class="col-md-12 mb-3">#}
+                {#	              <p><span>Телефон:</span> <a href="tel://1234567920">+7 961 191-71-11</a></p>#}
+                {#	            </div>#}
+                {#                <div class="col-md-12 mb-3">#}
+                {#	              <p><span>Телефон:</span> <a href="tel://1234567920">+7 903 870-14-01</a></p>#}
+                {#	            </div>#}
+                    <div class="col-md-12 mb-3">
+                        <p><span>Телефон:</span> <a href="tel://1234567920">58-91-33</a></p>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@gfp-russia.ru</a></p>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <p><span>Веб-сайт:</span> <a href="#">gfp-russia.ru</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6 ftco-animate">
+                <form action="#" class="contact-form" method="post">{% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input required type="text" class="form-control" name="{{ form.last_name.name }}" value="{{ request.POST.name}}" placeholder="Фамилия">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input required type="text" class="form-control" name="{{ form.first_name.name }}" value="{{ request.POST.name}}" placeholder="Имя">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input required type="text" class="form-control" name="{{ form.middle_name.name }}" value="{{ request.POST.name}}" placeholder="Отчество">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input required type="tel" class="form-control" name="{{ form.phone.name }}" value="{{ request.POST.name}}" placeholder="Телефон">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input required type="email" class="form-control" name="{{ form.email.name }}" value="{{ request.POST.name}}" placeholder="Ваш email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input required type="number" class="form-control" name="{{ form.weight.name }}" value="{{ request.POST.name}}" placeholder="Ваш фактический вес (кг)">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input required type="number" class="form-control" name="{{ form.age.name }}" value="{{ request.POST.name}}" placeholder="Ваш фактический возраст (полных лет)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input required type="text" class="form-control" name="{{ form.country.name }}" value="{{ request.POST.name}}" placeholder="Страна проживания">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input required type="text" class="form-control" name="{{ form.region.name }}" value="{{ request.POST.name}}" placeholder="Область/Регион">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input required type="text" class="form-control" name="{{ form.town.name }}" value="{{ request.POST.name}}" placeholder="Город проживания">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="{{ form.trainer.name }}" value="{{ request.POST.name}}" placeholder="ФИО тренера (если имеется)">
+                    </div>
+                    <div class="form-group">
+                        <textarea required name="{{ form.message.name }}" value="{{ request.POST.name }}" id="" cols="30" rows="7" class="form-control" placeholder="Укажите в каком движении Вы хотите выступать (например, жим лежа)"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Выберите из списка турнир</label>
+                        <select class="custom-select" name={{ form.tournament }}
+                        </select>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ваш пол</label>
+                        <select class="custom-select" name={{ form.gender }}
+                        </select>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Дивизион</label>
+                        <select class="custom-select" name={{ form.division }}
+                        </select>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Команда/Лично?</label>
+                        <select class="custom-select" name={{ form.line_up }}
+                        </select>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Отправить заявку!" class="btn btn-primary py-3 px-5">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

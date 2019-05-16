@@ -88,7 +88,7 @@ class AthletesAdmin(admin.ModelAdmin):
     inlines = [AthletesImageInline]
     list_display = ['last_name', 'first_name', 'gender', 'age', 'Возрастные_категории', 'weight', 'weight_category', 'Дивизион', 'Дисциплины', 'Турнир', 'wilkes', 'created']
     list_filter = ['division', 'discipline', 'gender', 'age_category', 'weight_category', 'tournament', 'town']
-    search_fields = ['first_name', 'last_name', 'division']
+    search_fields = ['first_name', 'last_name']
 
     class Meta:
         model = Athletes

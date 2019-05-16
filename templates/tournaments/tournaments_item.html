@@ -26,6 +26,10 @@
             <h3>Номинации GFP к турниру</h3>
             <p><a href="{{ tournaments_view.tournaments_nominations }}" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
         {% endif %}
+        {% if tournaments_view.tournaments_nominations %}
+            <h3>Итоговый протокол GFP к турниру</h3>
+            <p><a href="../../static/images/documents/OMT_Bryansk_itogovy_protokol_12_05_2019%20(xlsx).xlsx" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
+        {% endif %}
     </div>
 </div>
 

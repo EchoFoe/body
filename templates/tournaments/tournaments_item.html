@@ -1,5 +1,5 @@
 {% block content %}
-{% load static from staticfiles %}
+{% load static %}
 
 <!-- Турниры (item) -->
 <div class="program d-flex ftco-animate">
@@ -16,11 +16,13 @@
         <p><a href="{% url 'zayavka_june' %}" class="btn btn-primary btn-outline-primary px-4 py-3">Подать заявку на участие</a></p>
         {% if tournaments_view.tournaments_provisions_dk %}
             <h3>Положения GFP на турнир с прохождением допинг-контроля</h3>
-            <p><a href="{{ tournaments_view.tournaments_provisions_dk }}" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
+
+            <p><a href="{{ tournaments_view.tournaments_provisions_dk.url }}" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
+
         {% endif %}
         {% if tournaments_view.tournaments_provisions_bezdk %}
             <h3>Положения GFP на турнир без прохождения допинг-контроля</h3>
-            <p><a href="{{ tournaments_view.tournaments_provisions_bezdk }}" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
+            <p><a href="{{ tournaments_view.tournaments_provisions_bezdk.url }}" download="" class="btn btn-primary btn-outline-primary px-4 py-3">Скачать</a></p>
         {% endif %}
         {% if tournaments_view.tournaments_nominations %}
             <h3>Номинации GFP к турниру</h3>

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'import_export',
     'fixture_magic',
+    'phonenumber_field',
 
     'landing',
     'zayavka',
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     'tournaments',
     'members',
     'documents',
+    'representative',
 ]
 
 MIDDLEWARE = [

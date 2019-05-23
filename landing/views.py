@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import *
 from news.models import *
 from tournaments.models import *
+from representative.models import *
 from documents.models import *
 
 
@@ -15,6 +16,9 @@ def home(request):
     tournaments_view_held = tournaments_view.filter(tournaments_status__is_active=True, tournaments_status_id=2)
     tournaments_view_canceled = tournaments_view.filter(tournaments_status_id=3)
     tournaments_view_failed = tournaments_view.filter(tournaments_status_id=4)
+
+    representative_images = RepresentativeImage.objects.filter(image_is_active=True, image_is_main=True)
+    representative_images_all = representative_images.filter(Representative__is_active=True)
 
     form = SubscriberForm(request.POST or None)
 
@@ -85,6 +89,10 @@ def on_line(request):
     return render(request, 'on_line/on_line.html', locals())
 
 def representative(request):
+
+    representative_images = RepresentativeImage.objects.filter(image_is_active=True, image_is_main=True)
+    representative_images_all = representative_images.filter(Representative__is_active=True)
+
     form = SubscriberForm(request.POST or None)
 
     if request.method == "POST" and form.is_valid():

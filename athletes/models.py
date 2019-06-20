@@ -96,7 +96,7 @@ class Athletes(models.Model):
     birthday = models.DateField(default=None, null=True, blank=True, verbose_name='Дата рождения')
     age = models.DecimalField(max_digits=2, decimal_places=0, default=True, verbose_name='Возраст')
     age_category = models.ManyToManyField(Age_category, blank=True, default=True, verbose_name='Возраст. кат-рия')
-    weight_category = models.ForeignKey(Weight_category, on_delete=models.CASCADE, verbose_name='Вес. категория')
+    weight_category = models.ForeignKey(Weight_category, null=True, on_delete=models.CASCADE, verbose_name='Вес. категория')
     raised_weight = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True, default=00.00, verbose_name='Поднятый вес (общий)')
     wilkes = models.DecimalField(max_digits=6, decimal_places=2, default=00.00, blank=True, null=True, verbose_name='Коэффициент Уилкса')
     country = models.CharField(max_length=32, default=True, verbose_name='Страна')

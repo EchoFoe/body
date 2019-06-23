@@ -106,7 +106,7 @@ class Athletes(models.Model):
     trainer = models.CharField(max_length=64, blank=True, verbose_name='Тренер')
     tournament = models.ForeignKey(Tournaments, on_delete=models.CASCADE, verbose_name='Турнир')
     division = models.ForeignKey(Division, on_delete=models.CASCADE, verbose_name='Дивизион')
-    discipline = models.ManyToManyField(Discipline, blank=True, default=True, verbose_name='Дисциплины')
+    discipline = models.ForeignKey(Discipline, blank=True, null=True, on_delete=models.CASCADE, default=True, verbose_name='Дисциплины')
     message = models.TextField(max_length=128, blank=True, null=True, default=None, verbose_name='Сообщение')
     status = models.ForeignKey(Status, on_delete=models.CASCADE, default=id(1), verbose_name='Статус')
     is_active = models.BooleanField(default=True, verbose_name='Актуальность')
@@ -125,9 +125,9 @@ class Athletes(models.Model):
     def Дивизион(self):
         return self.division
 
-    @property
-    def Дисциплины(self):
-        return "\n".join([p.name for p in self.discipline.all()])
+    # @property
+    # def Дисциплины(self):
+    #     return "\n".join([p.name for p in self.discipline.all()])
 
     @property
     def Возрастные_категории(self):

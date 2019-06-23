@@ -144,7 +144,7 @@ class Athletes(models.Model):
         super(Athletes, self).save(*args, **kwargs)
 
 class AthletesImage(models.Model):
-    Athletes = models.ForeignKey(Athletes, blank=True, null=True, default=None, on_delete=models.CASCADE, verbose_name='Спортсмен')
+    Athletes = models.ForeignKey(Athletes, null=True, default=None, on_delete=models.CASCADE, verbose_name='Спортсмен')
     image = models.ImageField(upload_to='athletes_images/', verbose_name='Фотография спортсмена')
     image_is_main = models.BooleanField(default=False, verbose_name='Главная')
     image_is_active = models.BooleanField(default=True, verbose_name='Актуально')

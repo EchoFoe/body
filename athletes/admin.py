@@ -85,6 +85,7 @@ class AthletesImageInline(admin.TabularInline):
 
 
 class AthletesAdmin(admin.ModelAdmin):
+    save_as = True
     filter_horizontal = ('discipline', 'age_category')
     inlines = [AthletesImageInline]
     list_display = ['last_name', 'first_name', 'gender', 'age', 'Возрастные_категории', 'weight', 'weight_category', 'Дивизион', 'Дисциплины', 'Турнир', 'wilkes', 'created']

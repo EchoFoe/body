@@ -119,7 +119,7 @@ class Sportsman(models.Model):
     discipline = models.ForeignKey(Discipline, blank=True, null=True, default=True, on_delete=models.CASCADE, verbose_name='Дисциплина')
     message = models.TextField(max_length=128, blank=True, null=True, default=None, verbose_name='Сообщение')
     status = models.ForeignKey(Status, on_delete=models.CASCADE, default=id(1), verbose_name='Статус')
-    is_active = models.BooleanField(default=True, verbose_name='Актуальность')
+    is_active = models.BooleanField(default=True, verbose_name='Явка')
     created = models.DateTimeField(default=timezone.now, verbose_name='Дата заявления')
     updated = models.DateTimeField(default=timezone.now, verbose_name='Дата редактирования')
 

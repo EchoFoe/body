@@ -15,18 +15,28 @@ class AthletesImageInline(admin.TabularInline):
 
     class DisciplineAdmin(admin.ModelAdmin):
         list_display = [field.name for field in Discipline._meta.fields]
-        list_filter = ['name', 'id']
-        search_fields = ['name', 'id']
+        list_filter = ['name']
+        search_fields = ['name']
 
         class Meta:
             model = Discipline
 
     admin.site.register(Discipline, DisciplineAdmin)
 
+    class SubjectAdmin(admin.ModelAdmin):
+        list_display = [field.name for field in Subject._meta.fields]
+        list_filter = ['name']
+        search_fields = ['name']
+
+        class Meta:
+            model = Subject
+
+    admin.site.register(Subject, SubjectAdmin)
+
     class Weight_categoryAdmin(admin.ModelAdmin):
         list_display = [field.name for field in Weight_category._meta.fields]
-        list_filter = ['name', 'id']
-        search_fields = ['name', 'id']
+        list_filter = ['name']
+        search_fields = ['name']
 
         class Meta:
             model = Weight_category
@@ -55,8 +65,8 @@ class AthletesImageInline(admin.TabularInline):
 
     class StatusAdmin(admin.ModelAdmin):
         list_display = [field.name for field in Status._meta.fields]
-        list_filter = ['name', 'id']
-        search_fields = ['name', 'id']
+        list_filter = ['name']
+        search_fields = ['name']
 
         class Meta:
             model = Status
@@ -65,8 +75,8 @@ class AthletesImageInline(admin.TabularInline):
 
     class GenderAdmin(admin.ModelAdmin):
         list_display = [field.name for field in Gender._meta.fields]
-        list_filter = ['name', 'id']
-        search_fields = ['name', 'id']
+        list_filter = ['name']
+        search_fields = ['name']
 
         class Meta:
             model = Gender
@@ -75,8 +85,8 @@ class AthletesImageInline(admin.TabularInline):
 
     class Line_upAdmin(admin.ModelAdmin):
         list_display = [field.name for field in Line_up._meta.fields]
-        list_filter = ['name', 'id']
-        search_fields = ['name', 'id']
+        list_filter = ['name']
+        search_fields = ['name']
 
         class Meta:
             model = Line_up
@@ -88,8 +98,8 @@ class AthletesAdmin(admin.ModelAdmin):
     save_as = True
     filter_horizontal = ['age_category']
     inlines = [AthletesImageInline]
-    list_display = ['last_name', 'first_name', 'gender', 'age', 'Возрастные_категории', 'weight', 'weight_category', 'Дивизион', 'Турнир', 'wilkes', 'created']
-    list_filter = ['division', 'discipline', 'gender', 'age_category', 'weight_category', 'tournament', 'status', 'line_up', 'town']
+    list_display = ['last_name', 'first_name', 'gender', 'age', 'Возрастные_категории', 'weight', 'weight_category', 'Дивизион', 'subject', 'Турнир', 'wilkes', 'created']
+    list_filter = ['division', 'subject', 'gender', 'age_category', 'weight_category', 'tournament', 'status', 'line_up', 'town']
     search_fields = ['first_name', 'last_name']
 
     class Meta:

@@ -53,6 +53,17 @@ class Division(models.Model):
         verbose_name_plural = 'Дивизионы'
 
 class Discipline(models.Model):
+    name = models.CharField(max_length=128, blank=True, default=True, verbose_name="Не важно")
+    is_active = models.BooleanField(default=True, verbose_name='Актуальность')
+
+    def __str__(self):
+        return "%s" % self.name
+
+    class Meta:
+        verbose_name = 'Не важно'
+        verbose_name_plural = 'НЕ важно'
+
+class Subject(models.Model):
     name = models.CharField(max_length=128, blank=True, default=True, verbose_name="Название дисциплины")
     is_active = models.BooleanField(default=True, verbose_name='Актуальность')
 
@@ -106,7 +117,8 @@ class Athletes(models.Model):
     trainer = models.CharField(max_length=64, blank=True, verbose_name='Тренер')
     tournament = models.ForeignKey(Tournaments, on_delete=models.CASCADE, verbose_name='Турнир')
     division = models.ForeignKey(Division, on_delete=models.CASCADE, verbose_name='Дивизион')
-    discipline = models.ForeignKey(Discipline, blank=True, null=True, on_delete=models.CASCADE, default=True, verbose_name='Дисциплины')
+    discipline = models.ManyToManyField(Discipline, blank=True, default=True, verbose_name='Не важно')
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, default=True, verbose_name='Дисциплина')
     message = models.TextField(max_length=128, blank=True, null=True, default=None, verbose_name='Сообщение')
     status = models.ForeignKey(Status, on_delete=models.CASCADE, default=id(1), verbose_name='Статус')
     is_active = models.BooleanField(default=True, verbose_name='Актуальность')

@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'documents',
     'representative',
     'athletes',
+    'sportsman',
 ]
 
 MIDDLEWARE = [

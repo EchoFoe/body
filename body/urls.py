@@ -13,7 +13,7 @@ urlpatterns = [
     url(r'^', include('zayavka_june.urls')),
     url(r'^', include('news.urls')),
     url(r'^', include('tournaments.urls')),
-    url(r'^', include('athletes.urls')),
+    # url(r'^', include('athletes.urls')),
     url(r'^', include('sportsman.urls')),
 ]\
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \

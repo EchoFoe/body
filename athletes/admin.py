@@ -13,15 +13,15 @@ class AthletesImageInline(admin.TabularInline):
     model = AthletesImage
     extra = 0
 
-    class DisciplineAdmin(admin.ModelAdmin):
-        list_display = [field.name for field in Discipline._meta.fields]
-        list_filter = ['name']
-        search_fields = ['name']
-
-        class Meta:
-            model = Discipline
-
-    admin.site.register(Discipline, DisciplineAdmin)
+    # class DisciplineAdmin(admin.ModelAdmin):
+    #     list_display = [field.name for field in Discipline._meta.fields]
+    #     list_filter = ['name']
+    #     search_fields = ['name']
+    #
+    #     class Meta:
+    #         model = Discipline
+    #
+    # admin.site.register(Discipline, DisciplineAdmin)
 
     class SubjectAdmin(admin.ModelAdmin):
         list_display = [field.name for field in Subject._meta.fields]

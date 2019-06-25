@@ -136,6 +136,10 @@ class Sportsman(models.Model):
         return truncatechars(self.division, 20)
 
     @property
+    def Дисциплина(self):
+        return truncatechars(self.discipline, 32)
+
+    @property
     def Возрастные_категории(self):
         return "\n".join([p.name for p in self.age_category.all()])
 

@@ -88,7 +88,7 @@ class SportsmanAdmin(admin.ModelAdmin):
     save_as = True
     filter_horizontal = ['age_category']
     inlines = [SportsmanImageInline]
-    fields = [('last_name', 'first_name', 'middle_name'), ('email', 'phone'), ('country', 'region', 'town'), ('age', 'birthday'), 'age_category', ('weight', 'weight_category'), ('raised_weight', 'wilkes'), ('division', 'discipline'), 'tournament', ('line_up', 'trainer'), ('status', 'is_active'), 'message', ('created', 'updated')]
+    fields = [('last_name', 'first_name', 'middle_name', 'gender'), ('email', 'phone'), ('country', 'region', 'town'), ('age', 'birthday'), 'age_category', ('weight', 'weight_category'), ('raised_weight', 'wilkes'), ('division', 'discipline'), 'tournament', ('line_up', 'trainer'), ('status', 'is_active'), 'message', ('created', 'updated')]
     list_display = ['last_name', 'first_name', 'is_active', 'gender', 'age', 'Возрастные_категории', 'weight', 'weight_category',
                     'Дивизион', 'discipline', 'Турнир', 'wilkes', 'created']
     list_filter = ['division', 'discipline', 'gender', 'age_category', 'weight_category', 'tournament', 'status',

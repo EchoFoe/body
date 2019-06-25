@@ -133,7 +133,7 @@ class Sportsman(models.Model):
 
     @property
     def Дивизион(self):
-        return self.division
+        return truncatechars(self.division, 20)
 
     @property
     def Возрастные_категории(self):

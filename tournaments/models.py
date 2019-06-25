@@ -102,7 +102,7 @@ verbose_name='Номинации на турнир')
         return "\n".join([p.name for p in self.tournaments_divisions.all()])
 
     def __str__(self):
-        return "%s" % self.tournaments_name
+        return "%s" % self.tournaments_name_short
 
     class Meta:
         verbose_name = 'Турнир'

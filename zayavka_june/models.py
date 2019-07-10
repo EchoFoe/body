@@ -23,5 +23,5 @@ class Zayavka_june(models.Model):
         return "Спортсмен(ка): %s %s, почта: %s" % (self.first_name, self.last_name, self.email)
 
     class Meta:
-        verbose_name = 'Он-лайн заявка на участие в турнире на июнь'
-        verbose_name_plural = 'Он-лайн заявки на участие в турнире на июнь'
+        verbose_name = 'Он-лайн заявка на участие в турнире на октябрь'
+        verbose_name_plural = 'Он-лайн заявки на участие в турнире на октябрь'

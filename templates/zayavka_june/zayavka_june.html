@@ -5,7 +5,7 @@
 
 <section class="home-slider owl-carousel">
 
-    <div class="slider-item" style="background-image: url(../../static/images/section_9/news_gfp_img_6.jpg);" data-stellar-background-ratio="0.5">
+    <div class="slider-item" style="background-image: url(../../static/images/section_9/Orel_afisha_partnery.jpg);" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row slider-text justify-content-center align-items-center">
@@ -98,6 +98,9 @@
                     <div class="form-group">
                         <input type="text" class="form-control" name="{{ form.trener.name }}" value="{{ request.POST.name}}" placeholder="ФИО тренера (если имеется)">
                     </div>
+{#                    <div class="form-group">#}
+{#                        <select class="custom-select" name="{{ form.gender }}"></select>#}
+{#                    </div>#}
                     <div class="form-group">
                         <textarea required name="{{ form.message.name }}" value="{{ request.POST.name }}" id="" cols="30" rows="7" class="form-control" placeholder="Укажите в каком движении Вы хотите выступать (например, жим лежа)"></textarea>
                     </div>
@@ -110,4 +113,13 @@
     </div>
 </section>
 
+<script type="text/javascript">
+$('.popup .close_window, .overlay').click(function (){
+$('.popup, .overlay').css({'opacity': 0, 'visibility': 'hidden'});
+});
+$('a.open_window').click(function (e){
+$('.popup, .overlay').css({'opacity': 1, 'visibility': 'visible'});
+e.preventDefault();
+});
+</script>
 {% endblock content %}

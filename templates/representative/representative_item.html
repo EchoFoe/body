@@ -8,20 +8,22 @@
         <div class="text py-4 px-5 ftco-animate">
             <span class="subheading">{{ representative_images.Representative.position }}</span>
             <h3><a href="#">{{ representative_images.Representative.first_name }} {{ representative_images.Representative.last_name }}</a></h3>
-            <p>{{ representative_images.Representative.info }}</p>
+                {% if representative_images.Representative.info %}
+                    <p>{{ representative_images.Representative.info }}</p>
+                {% endif %}
                 {% if representative_images.Representative.phone %}
                     <p><a href="#"><span class="icon icon-phone"></span><span class="text"> {{ representative_images.Representative.phone }}</span></a></p>
                 {% endif %}
-            <br><br><br><br><br><br><br><br><br><br><br><br>
-            <ul class="ftco-social-media d-flex mt-4">
-                {% if representative_images.Representative.vk %}
-                    <li class="ftco-animate"><a href="{{ representative_images.Representative.vk }}" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-vk"></span></a></li>
-                {% endif %}
-                {% if representative_images.Representative.instagram %}
-                    <li class="ftco-animate"><a href="{{ representative_images.Representative.instagram }}" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
-                {% endif %}
-            </ul>
-            <p></p>
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
+                <ul class="ftco-social-media d-flex mt-4">
+                    {% if representative_images.Representative.vk %}
+                        <li class="ftco-animate"><a href="{{ representative_images.Representative.vk }}" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-vk"></span></a></li>
+                    {% endif %}
+                    {% if representative_images.Representative.instagram %}
+                        <li class="ftco-animate"><a href="{{ representative_images.Representative.instagram }}" class="mr-2 d-flex justify-content-center align-items-center"><span class="icon-instagram"></span></a></li>
+                    {% endif %}
+                </ul>
+                <p></p>
         </div>
     </div>
 </div>

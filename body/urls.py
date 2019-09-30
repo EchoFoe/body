@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^', include('zayavka_regional.urls')),
     url(r'^', include('zayavka_sudia.urls')),
     url(r'^', include('zayavka_may.urls')),
-    url(r'^', include('zayavka_june.urls')),
+    # url(r'^', include('zayavka_june.urls')),
     url(r'^', include('news.urls')),
     url(r'^', include('tournaments.urls')),
     # url(r'^', include('athletes.urls')),
